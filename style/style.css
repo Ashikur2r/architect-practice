@@ -44,7 +44,7 @@
 .banner-description{
     margin: 30px 0;
 }
-.banner-btn{
+.primary-btn{
     padding: 20px 25px;
     font-size: 1.1rem;
     font-weight: 600;
@@ -52,6 +52,7 @@
     background-color: #FF900E;
     border-style: none;
     border-radius: 8px;
+    cursor: pointer;
 }
 .banner-img{
     padding: 5px 10%;
@@ -60,6 +61,35 @@
 .banner-img img{
     width: 100%;
 }
+/* feature style  */
+.feature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+}
+.feature-item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.feature-content{
+    padding-left: 5%;
+}
+.feature-content-title{
+    font-size: 3rem;
+}
+.feature-content-description{
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+.feature-item img{
+    width: auto;
+}
+
+
+
+
 /* responsive design styel  */
 @media screen and (max-width: 576px) {
     .nav-bar{
@@ -81,8 +111,21 @@
     p{
         font-size: .8rem;
     }
-    .banner-btn{
+    .primary-btn{
         padding: 15px 20px;
+    }
+    .feature{
+        flex-direction: column;
+    }
+    .feature-content{
+        padding-left: 20px;
+        padding-top: 25px;
+    }
+    .feature-content-title{
+        font-size: 2rem;
+    }
+    .feature-item img{
+        width: 100%;
     }
     
 }
@@ -91,6 +134,16 @@
         flex-direction: column;
     }
     .nav-menu{
+        padding-top: 25px;
+    }
+    .feature{
+        flex-direction: column;
+    }
+    .feature-item img{
+        width: 100%;
+    }
+    .feature-content{
+        padding-left: 20px;
         padding-top: 25px;
     }
 }
