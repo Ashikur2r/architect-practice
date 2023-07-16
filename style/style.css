@@ -110,7 +110,7 @@
 .feature-container {
     display: flex;
     justify-content: space-between;
-    margin: 100px 0;
+    margin-top: 50px;
     gap: 54px;
 }
 
@@ -166,6 +166,33 @@
     font-size: 1.5rem;
 }
 
+/* some facts style  */
+.some-facts {
+    margin-bottom: 120px;
+}
+.some-facts-content{
+    padding-left: 8%;
+    margin-bottom: 80px;
+}
+.some-facts-content h3{
+    font-size: 3rem;
+    margin-top: 25px;
+}
+.some-facts-item {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.some-facts-card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 45px 30px;
+}
+.some-facts-card h1{
+    font-size: 2.5rem;
+}
 
 /* responsive design styel  */
 @media screen and (max-width: 576px) {
@@ -199,7 +226,8 @@
     }
 
     .feature,
-    .feature-container {
+    .feature-container,
+    .some-facts-item {
         flex-direction: column;
     }
 
@@ -230,21 +258,22 @@
         max-width: 300px;
         position: static;
     }
+    .some-facts-card{
+        margin: 0 50px;
+    }
 }
 
 
 @media screen and (min-width: 576px) and (max-width: 960px) {
-    .nav-bar {
+    .nav-bar,
+    .feature,
+    .feature-container,
+    .some-facts-item {
         flex-direction: column;
     }
 
     .nav-menu {
         padding-top: 25px;
-    }
-
-    .feature,
-    .feature-container {
-        flex-direction: column;
     }
 
     .feature-item img {
@@ -259,6 +288,8 @@
 
     .card-badge {
         max-width: 300px;
-
+    }
+    .some-facts-card{
+        margin: 0 150px;
     }
 }
