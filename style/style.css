@@ -12,6 +12,9 @@
 .header {
     background: rgba(255, 144, 14, 0.10);
     padding: 50px 0;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
 }
 
 .nav-bar {
@@ -106,13 +109,13 @@
 /* feature container section styel  */
 .feature-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 100px 0;
     gap: 54px;
 }
 
 .feature-container-picture img {
-    height: 80%;
+    height: 70%;
     margin: 0 20px;
 }
 
@@ -120,8 +123,9 @@
     padding-left: 120px;
     padding-top: 25px;
 }
-.feature-container-title{
-    border-left:5px solid #FF900E;
+
+.feature-container-title {
+    border-left: 5px solid #FF900E;
     padding-left: 15px;
     margin-bottom: 25px;
     font-size: 2rem;
@@ -134,13 +138,16 @@
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
     margin: 15px 0;
 }
-.card-title{
+
+.card-title {
     margin-bottom: 10px;
 }
-.card-description{
-    color:  #727272;
+
+.card-description {
+    color: #727272;
 }
-.card-badge{
+
+.card-badge {
     padding: 40px 42px;
     background-color: #FF900E;
     text-align: center;
@@ -150,10 +157,12 @@
     border-radius: 8px;
     color: white;
 }
-.card-badge h3{
+
+.card-badge h3 {
     font-size: 4rem;
 }
-.card-badge p{
+
+.card-badge p {
     font-size: 1.5rem;
 }
 
@@ -165,7 +174,7 @@
     }
 
     .nav-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .nav-menu {
@@ -189,11 +198,17 @@
         padding: 15px 20px;
     }
 
-    .feature, .feature-container {
+    .feature,
+    .feature-container {
         flex-direction: column;
     }
 
-    .feature-content, .feature-container-content {
+    .feature-item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature-content,
+    .feature-container-content {
         padding-left: 20px;
         padding-top: 25px;
     }
@@ -202,20 +217,22 @@
         font-size: 2rem;
     }
 
-    .feature-item img{
+    .feature-item img {
         width: 100%;
     }
 
+    .feature-container-picture img {
+        width: 90%;
+        margin: 0 20px;
+    }
+
+    .card-badge {
+        max-width: 300px;
+        position: static;
+    }
 }
-.feature-container-picture img {
-    width: 90%;
-    margin: 0 20px;
-}
-.card-badge{
-    max-width: 300px;
-    position: static;
-    margin-top: 25px;
-}
+
+
 @media screen and (min-width: 576px) and (max-width: 960px) {
     .nav-bar {
         flex-direction: column;
@@ -225,7 +242,8 @@
         padding-top: 25px;
     }
 
-    .feature, .feature-container{
+    .feature,
+    .feature-container {
         flex-direction: column;
     }
 
@@ -233,13 +251,14 @@
         width: 100%;
     }
 
-    .feature-content, .feature-container-content {
+    .feature-content,
+    .feature-container-content {
         padding-left: 20px;
         padding-top: 25px;
     }
-    .card-badge{
+
+    .card-badge {
         max-width: 300px;
-        position: static;
-        margin-top: 25px;
+
     }
 }
